@@ -45,6 +45,9 @@ UPDATE_PACKAGE() {
 # UPDATE_PACKAGE "open-app-filter" "destan19/OpenAppFilter" "master" "" "luci-app-appfilter oaf" 这样会把原有的open-app-filter，luci-app-appfilter，oaf相关组件删除，不会出现coremark错误。
 
 # UPDATE_PACKAGE "包名" "项目地址" "项目分支" "pkg/name，可选，pkg为从大杂烩中单独提取包名插件；name为重命名为包名"
+
+UPDATE_PACKAGE "ace8" "0xACE8/xplorewrt-packages" "main" "" "luci-app-adguardhome adguardhome luci-theme-argon luci-app-argon-config luci-app-cpu-status-mini luci-app-netspeedtest homebox netspeedtest speedtest-cli luci-app-store luci-app-wechatpush wrtbwmon luci-lib-taskd luci-lib-xterm package_kernel_ml-tcp-lotspeed package_kernel_tcp-brutal taskd"
+
 UPDATE_PACKAGE "argon" "sbwml/luci-theme-argon" "openwrt-25.12"
 UPDATE_PACKAGE "aurora" "eamonxg/luci-theme-aurora" "master"
 UPDATE_PACKAGE "aurora-config" "eamonxg/luci-app-aurora-config" "master"
@@ -58,22 +61,8 @@ UPDATE_PACKAGE "openclash" "vernesong/OpenClash" "dev" "pkg"
 UPDATE_PACKAGE "passwall" "Openwrt-Passwall/openwrt-passwall" "main" "pkg"
 UPDATE_PACKAGE "passwall2" "Openwrt-Passwall/openwrt-passwall2" "main" "pkg"
 
-UPDATE_PACKAGE "luci-app-tailscale" "asvow/luci-app-tailscale" "main"
-
 UPDATE_PACKAGE "ddns-go" "sirpdboy/luci-app-ddns-go" "main"
-UPDATE_PACKAGE "diskman" "lisaac/luci-app-diskman" "master"
-UPDATE_PACKAGE "easytier" "EasyTier/luci-app-easytier" "main"
-UPDATE_PACKAGE "fancontrol" "rockjake/luci-app-fancontrol" "main"
 UPDATE_PACKAGE "gecoosac" "lwb1978/openwrt-gecoosac" "main"
-UPDATE_PACKAGE "mosdns" "sbwml/luci-app-mosdns" "v5" "" "v2dat"
-UPDATE_PACKAGE "netspeedtest" "sirpdboy/luci-app-netspeedtest" "master" "" "homebox speedtest"
-UPDATE_PACKAGE "openlist2" "sbwml/luci-app-openlist2" "main"
-UPDATE_PACKAGE "partexp" "sirpdboy/luci-app-partexp" "main"
-UPDATE_PACKAGE "qbittorrent" "sbwml/luci-app-qbittorrent" "master" "" "qt6base qt6tools rblibtorrent"
-UPDATE_PACKAGE "qmodem" "FUjr/QModem" "main"
-UPDATE_PACKAGE "quickfile" "sbwml/luci-app-quickfile" "main"
-UPDATE_PACKAGE "viking" "VIKINGYFY/packages" "main" "" "luci-app-timewol luci-app-wolplus"
-UPDATE_PACKAGE "vnt" "lmq8267/luci-app-vnt" "main"
 
 #更新软件包版本
 UPDATE_VERSION() {
