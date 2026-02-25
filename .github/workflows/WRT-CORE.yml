@@ -78,6 +78,9 @@ jobs:
           sudo bash -c 'bash <(curl -sL https://build-scripts.immortalwrt.org/init_build_environment.sh)'
           sudo -E systemctl daemon-reload
           sudo -E timedatectl set-timezone "Asia/Shanghai"
+          git config --global url."https://$ACCESS_TOKEN@github.com/0xACE8/".insteadOf "https://github.com/0xACE8/"
+          git config --global core.compression 0
+          
 
           sudo mkdir -p /mnt/build_wrt
           sudo chown $USER:$USER /mnt/build_wrt
@@ -103,7 +106,7 @@ jobs:
             echo "defconfig directory not found, stopping workflow."
             exit 0
           fi
-
+          sed -i '47,54d' scripts/patch-kernel.sh
           # GitHub Action 移除国内下载源
           PROJECT_MIRRORS_FILE="./scripts/projectsmirrors.json"
           if [ -f "$PROJECT_MIRRORS_FILE" ]; then
