@@ -167,6 +167,8 @@ jobs:
 
           $GITHUB_WORKSPACE/Scripts/Packages.sh
           $GITHUB_WORKSPACE/Scripts/Handles.sh
+          sed -i 's/Xiaomi Redmi Router AX6000 (OpenWrt U-Boot layout)/Redmi AX6000 Modded (2G RAM, SPI NAND 512MB Version)/g' target/linux/mediatek/dts/mt7986a-xiaomi-redmi-router-ax6000-ubootmod.dts
+          sed -i 's/0x6e00000/0x1ea00000/g' target/linux/mediatek/dts/mt7986a-xiaomi-redmi-router-ax6000-ubootmod.dts
 
       - name: Custom Settings
         run: |
